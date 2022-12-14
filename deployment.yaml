@@ -1,0 +1,606 @@
+IC_API_KEY: None
+cloud:
+    api_key: None
+    default: 'yes'
+    id: ic
+    metadata: cloud.yaml
+    name: IBM Cloud
+    sites:
+    -   cloud_region: us-east
+        region: pr
+        site: primary
+        zone:
+        -   data_center: wdc06
+            default: true
+            id: az01
+            name: us-east-2
+customer:
+    Components: 2a
+    byoip_range: 10.13.52.0/22
+    customer_on_premise_network_range: null
+    description: Power Infra base code
+    domain: sap.hi.hubbell-ad.com
+    env: prd
+    expiration: ddmmyyyy
+    id: hbl
+    landscape: pes
+    mgmtip_range: 172.31.136.0/22
+    name: HUBBELL
+    program: RwSAP
+    site: primary
+    status: active
+    yaml_schema_version: 1.0.0
+    zone:
+    - az01
+environment:
+-   id: prd
+    name: Production
+landscapes:
+-   id: pes
+    name: PES - power-base components
+pi_catalog_images:
+-   deploy: false
+    id: fetch1
+    pi_cloud_instance_id: pvs
+    sap: true
+    vtl: None
+-   deploy: false
+    id: fetch2
+    pi_cloud_instance_id: pvs
+    sap: true
+    vtl: None
+-   deploy: false
+    id: fetch3
+    pi_cloud_instance_id: pvs
+    sap: true
+    vtl: None
+pi_images:
+-   deploy: None
+    fetch: fetch1
+    id: rhel_84_sap_app
+    pi_affinity_instance: None
+    pi_affinity_policy: None
+    pi_affinity_volume: None
+    pi_anti_affinity_instances: None
+    pi_anti_affinity_volumes: None
+    pi_catalog_image_name: RHEL8-SP4-SAP-NETWEAVER
+    pi_cloud_instance_id: pvs
+    pi_image_access_key: None
+    pi_image_bucket_access: None
+    pi_image_bucket_file_name: None
+    pi_image_bucket_name: None
+    pi_image_bucket_region: None
+    pi_image_id: None
+    pi_image_name: RHEL8-SP4-SAP-APP
+    pi_image_secret_key: None
+    pi_image_storage_pool: None
+    pi_image_storage_type: None
+-   deploy: None
+    fetch: fetch2
+    id: rhel_86_base
+    pi_affinity_instance: None
+    pi_affinity_policy: None
+    pi_affinity_volume: None
+    pi_anti_affinity_instances: None
+    pi_anti_affinity_volumes: None
+    pi_catalog_image_name: RHEL8-SP6
+    pi_cloud_instance_id: pvs
+    pi_image_access_key: None
+    pi_image_bucket_access: None
+    pi_image_bucket_file_name: None
+    pi_image_bucket_name: None
+    pi_image_bucket_region: None
+    pi_image_id: None
+    pi_image_name: RHEL8-SP6-BASE
+    pi_image_secret_key: None
+    pi_image_storage_pool: None
+    pi_image_storage_type: None
+-   deploy: None
+    fetch: fetch3
+    id: rhel_84_sap_db
+    pi_affinity_instance: None
+    pi_affinity_policy: None
+    pi_affinity_volume: None
+    pi_anti_affinity_instances: None
+    pi_anti_affinity_volumes: None
+    pi_catalog_image_name: RHEL8-SP4-SAP
+    pi_cloud_instance_id: pvs
+    pi_image_access_key: None
+    pi_image_bucket_access: None
+    pi_image_bucket_file_name: None
+    pi_image_bucket_name: None
+    pi_image_bucket_region: None
+    pi_image_id: None
+    pi_image_name: RHEL8-SP4-SAP-DB
+    pi_image_secret_key: None
+    pi_image_storage_pool: None
+    pi_image_storage_type: None
+pi_instances:
+-   additional_pi_volume_ids:
+    - 01-vol-sap-downloads-01
+    count: 1
+    deploy: None
+    network_interfaces:
+    -   id: primary
+        ip: None
+        name: mgmt-network
+    -   id: secondary
+        ip: None
+        name: sap-network
+    pi_affinity_instance: None
+    pi_affinity_policy: None
+    pi_affinity_volume: None
+    pi_anti_affinity_instances: None
+    pi_anti_affinity_volumes: None
+    pi_cloud_instance_id: pvs
+    pi_deployment_type: None
+    pi_health_status: OK
+    pi_image_id: rhel_84_sap_app
+    pi_instance_name: nfsha
+    pi_key_pair_name: ansible
+    pi_license_repository_capacity: None
+    pi_memory: 8
+    pi_migratable: None
+    pi_pin_policy: None
+    pi_placement_group_id: nfs_pg
+    pi_proc_type: dedicated
+    pi_processors: 4
+    pi_replicants: None
+    pi_replication_policy: None
+    pi_replication_scheme: None
+    pi_sap_deployment_type: None
+    pi_sap_profile_id: None
+    pi_shared_processor_pool: None
+    pi_storage_connection: None
+    pi_storage_pool: None
+    pi_storage_pool_affinity: false
+    pi_storage_type: tier3
+    pi_sys_type: s922
+    pi_user_data: None
+    pi_virtual_cores_assigned: None
+    pi_volume_ids: dev
+    tags:
+    -   app: nfs
+        appgrp: sap
+        apptype: nf
+        arch: x86_64
+        az: az01
+        base_node: 0
+        distro: rhel
+        dsg: core_dsg
+        managed_by: pes
+        os: linux
+        sap_sid: ibm
+        sapfunction: sapservers
+        sapfunctionapp: netweaver
+        server_count: '02'
+        site: primary
+        sp: sp2
+        storage_tag: dev
+        stripe_count: '01'
+        type: s4hana
+        yaml_schema_version: 1.0.0
+-   additional_pi_volume_ids:
+    - 01-dev-nf-scm-ha-01
+    - 01-dev-nf-slm-ha-01
+    - 01-dev-nf-tm9-ha-01
+    - 01-dev-nf-pnw-ha-01
+    - 01-dev-nf-hef-ha-01
+    - 01-dev-nf-fio-ha-01
+    - 01-dev-nf-cua-ha-01
+    - 01-vol-sap-downloads-01
+    count: 1
+    deploy: None
+    network_interfaces:
+    -   id: primary
+        ip: None
+        name: mgmt-network
+    -   id: secondary
+        ip: None
+        name: sap-network
+    pi_affinity_instance: None
+    pi_affinity_policy: None
+    pi_affinity_volume: None
+    pi_anti_affinity_instances: None
+    pi_anti_affinity_volumes: None
+    pi_cloud_instance_id: pvs
+    pi_deployment_type: None
+    pi_health_status: OK
+    pi_image_id: rhel_84_sap_app
+    pi_instance_name: nfsha
+    pi_key_pair_name: ansible
+    pi_license_repository_capacity: None
+    pi_memory: 8
+    pi_migratable: None
+    pi_pin_policy: None
+    pi_placement_group_id: nfs_pg
+    pi_proc_type: dedicated
+    pi_processors: 4
+    pi_replicants: None
+    pi_replication_policy: None
+    pi_replication_scheme: None
+    pi_sap_deployment_type: None
+    pi_sap_profile_id: None
+    pi_shared_processor_pool: None
+    pi_storage_connection: None
+    pi_storage_pool: None
+    pi_storage_pool_affinity: false
+    pi_storage_type: tier3
+    pi_sys_type: s922
+    pi_user_data: None
+    pi_virtual_cores_assigned: None
+    pi_volume_ids: None
+    tags:
+    -   app: nfs
+        appgrp: sap
+        apptype: nf
+        arch: x86_64
+        az: az01
+        base_node: 1
+        distro: rhel
+        dsg: core_dsg
+        managed_by: pes
+        os: linux
+        sap_sid: ibm
+        sapfunction: sapservers
+        sapfunctionapp: netweaver
+        server_count: '02'
+        site: primary
+        sp: sp2
+        storage_tag: null
+        stripe_count: '01'
+        type: s4hana
+        yaml_schema_version: 1.0.0
+-   additional_pi_volume_ids: None
+    count: 1
+    deploy: None
+    network_interfaces:
+    -   id: primary
+        ip: None
+        name: mgmt-network
+    -   id: secondary
+        ip: None
+        name: sap-network
+    pi_affinity_instance: None
+    pi_affinity_policy: None
+    pi_affinity_volume: None
+    pi_anti_affinity_instances: None
+    pi_anti_affinity_volumes: None
+    pi_cloud_instance_id: pvs
+    pi_deployment_type: None
+    pi_health_status: OK
+    pi_image_id: rhel_86_base
+    pi_instance_name: powersc
+    pi_key_pair_name: ansible
+    pi_license_repository_capacity: None
+    pi_memory: 8
+    pi_migratable: None
+    pi_pin_policy: None
+    pi_placement_group_id: null
+    pi_proc_type: shared
+    pi_processors: 1
+    pi_replicants: None
+    pi_replication_policy: None
+    pi_replication_scheme: None
+    pi_sap_deployment_type: None
+    pi_sap_profile_id: None
+    pi_shared_processor_pool: None
+    pi_storage_connection: None
+    pi_storage_pool: None
+    pi_storage_pool_affinity: false
+    pi_storage_type: tier3
+    pi_sys_type: s922
+    pi_user_data: None
+    pi_virtual_cores_assigned: None
+    pi_volume_ids: None
+    tags:
+    -   app: powersc
+        appgrp: sap
+        apptype: ps
+        arch: x86_64
+        az: az01
+        base_node: 0
+        distro: rhel
+        dsg: core_dsg
+        managed_by: pes
+        os: linux
+        sap_sid: sec
+        server_count: '01'
+        site: primary
+        sp: sp2
+        storage_tag: null
+        stripe_count: '01'
+        type: null
+        yaml_schema_version: 1.0.0
+pi_keys:
+-   deploy: None
+    id: ansible
+    pi_cloud_instance_id: pvs
+    pi_key_name: ansible-pi-key
+    pi_ssh_key_file: ./keys/hbl.pub
+    tags:
+    -   purpose: customer
+pi_networks:
+-   deploy: true
+    id: mgmt-network
+    pi_cidr: 172.31.138.0/24
+    pi_cloud_instance_id: pvs
+    pi_dns:
+    - 127.0.0.1
+    pi_ending_ip_address: 172.31.138.254
+    pi_gateway: null
+    pi_network_jumbo: true
+    pi_network_name: mgmt-network
+    pi_network_type: vlan
+    pi_starting_ip_address: 172.31.138.30
+-   deploy: true
+    id: sap-network
+    pi_cidr: 10.13.54.0/24
+    pi_cloud_instance_id: pvs
+    pi_dns:
+    - 127.0.0.1
+    pi_ending_ip_address: 10.13.54.254
+    pi_gateway: null
+    pi_network_jumbo: true
+    pi_network_name: sap-network
+    pi_network_type: vlan
+    pi_starting_ip_address: 10.13.54.30
+pi_storage_volumes:
+    block_storage:
+    -   az: az01
+        disk_id: dev
+        disks:
+        -   count: 1
+            deploy: None
+            mounts:
+            -   filesystem_type: nfs
+                path: /usr/sap/trans
+                size: 50G
+            -   filesystem_type: nfs
+                path: /sapmnt
+                size: 20G
+            overhead: 2G
+            pi_affinity_instance: None
+            pi_affinity_policy: None
+            pi_affinity_volume: None
+            pi_anti_affinity_instances: None
+            pi_anti_affinity_volumes: None
+            pi_volume_name: hef-ha
+            pi_volume_pool: None
+            pi_volume_shareable: true
+            pi_volume_size: 70G
+            pi_volume_type: tier3
+            server_count: 1
+            storage_type: block
+            strategy: stripe
+        -   count: 1
+            deploy: None
+            mounts:
+            -   filesystem_type: nfs
+                path: /usr/sap/trans
+                size: 50G
+            -   filesystem_type: nfs
+                path: /sapmnt
+                size: 20G
+            overhead: 2G
+            pi_affinity_instance: None
+            pi_affinity_policy: None
+            pi_affinity_volume: None
+            pi_anti_affinity_instances: None
+            pi_anti_affinity_volumes: None
+            pi_volume_name: tm9-ha
+            pi_volume_pool: None
+            pi_volume_shareable: true
+            pi_volume_size: 70G
+            pi_volume_type: tier3
+            server_count: 1
+            storage_type: block
+            strategy: stripe
+        -   count: 1
+            deploy: None
+            mounts:
+            -   filesystem_type: nfs
+                path: /usr/sap/trans
+                size: 50G
+            -   filesystem_type: nfs
+                path: /sapmnt
+                size: 20G
+            overhead: 2G
+            pi_affinity_instance: None
+            pi_affinity_policy: None
+            pi_affinity_volume: None
+            pi_anti_affinity_instances: None
+            pi_anti_affinity_volumes: None
+            pi_volume_name: cua-ha
+            pi_volume_pool: None
+            pi_volume_shareable: true
+            pi_volume_size: 70G
+            pi_volume_type: tier3
+            server_count: 1
+            storage_type: block
+            strategy: stripe
+        -   count: 1
+            deploy: None
+            mounts:
+            -   filesystem_type: nfs
+                path: /usr/sap/trans
+                size: 50G
+            -   filesystem_type: nfs
+                path: /sapmnt
+                size: 20G
+            overhead: 2G
+            pi_affinity_instance: None
+            pi_affinity_policy: None
+            pi_affinity_volume: None
+            pi_anti_affinity_instances: None
+            pi_anti_affinity_volumes: None
+            pi_volume_name: fio-ha
+            pi_volume_pool: None
+            pi_volume_shareable: true
+            pi_volume_size: 70G
+            pi_volume_type: tier3
+            server_count: 1
+            storage_type: block
+            strategy: stripe
+        -   count: 1
+            deploy: None
+            mounts:
+            -   filesystem_type: nfs
+                path: /usr/sap/trans
+                size: 50G
+            -   filesystem_type: nfs
+                path: /sapmnt
+                size: 20G
+            overhead: 2G
+            pi_affinity_instance: None
+            pi_affinity_policy: None
+            pi_affinity_volume: None
+            pi_anti_affinity_instances: None
+            pi_anti_affinity_volumes: None
+            pi_volume_name: opt-ha
+            pi_volume_pool: None
+            pi_volume_shareable: true
+            pi_volume_size: 70G
+            pi_volume_type: tier3
+            server_count: 1
+            storage_type: block
+            strategy: stripe
+        -   count: 1
+            deploy: true
+            mounts:
+            -   filesystem_type: nfs
+                path: /usr/sap/trans
+                size: 50G
+            -   filesystem_type: nfs
+                path: /sapmnt
+                size: 20G
+            overhead: 2G
+            pi_affinity_instance: None
+            pi_affinity_policy: None
+            pi_affinity_volume: None
+            pi_anti_affinity_instances: None
+            pi_anti_affinity_volumes: None
+            pi_volume_name: pnw-ha
+            pi_volume_pool: None
+            pi_volume_shareable: true
+            pi_volume_size: 2G
+            pi_volume_type: tier3
+            server_count: 1
+            storage_type: block
+            strategy: stripe
+        -   count: 1
+            deploy: true
+            mounts:
+            -   filesystem_type: nfs
+                path: /usr/sap/trans
+                size: 50G
+            -   filesystem_type: nfs
+                path: /sapmnt
+                size: 20G
+            overhead: 2G
+            pi_affinity_instance: None
+            pi_affinity_policy: None
+            pi_affinity_volume: None
+            pi_anti_affinity_instances: None
+            pi_anti_affinity_volumes: None
+            pi_volume_name: scm-ha
+            pi_volume_pool: None
+            pi_volume_shareable: true
+            pi_volume_size: 2G
+            pi_volume_type: tier3
+            server_count: 1
+            storage_type: block
+            strategy: stripe
+        -   count: 1
+            deploy: true
+            mounts:
+            -   filesystem_type: nfs
+                path: /usr/sap/trans
+                size: 50G
+            -   filesystem_type: nfs
+                path: /sapmnt
+                size: 20G
+            overhead: 2G
+            pi_affinity_instance: None
+            pi_affinity_policy: None
+            pi_affinity_volume: None
+            pi_anti_affinity_instances: None
+            pi_anti_affinity_volumes: None
+            pi_volume_name: slm-ha
+            pi_volume_pool: None
+            pi_volume_shareable: true
+            pi_volume_size: 2G
+            pi_volume_type: tier3
+            server_count: 1
+            storage_type: block
+            strategy: stripe
+        name: SAP Hana
+        pi_cloud_instance_id: pvs
+        tags:
+        -   apptype: nf
+    -   az: az01
+        disk_id: vol
+        disks:
+        -   count: 1
+            deploy: true
+            mounts:
+            -   filesystem_type: nfs
+                path: /swap-downloads
+                size: 1G
+            overhead: 2G
+            pi_affinity_instance: None
+            pi_affinity_policy: None
+            pi_affinity_volume: None
+            pi_anti_affinity_instances: None
+            pi_anti_affinity_volumes: None
+            pi_volume_name: downloads
+            pi_volume_pool: None
+            pi_volume_shareable: true
+            pi_volume_size: 1G
+            pi_volume_type: tier3
+            server_count: 1
+            storage_type: block
+            strategy: stripe
+        name: sap downloads
+        pi_cloud_instance_id: pvs
+        tags:
+        -   apptype: sap
+pi_volume_attach:
+-   deploy: None
+    id: nfs_dsw_ha_vol_pd1
+    pi_cloud_instance_id: pvs
+    pi_instance_id: nfsha-01
+    pi_volume_id: 01-sap-vol-downloads-01
+-   deploy: None
+    id: nfs_dsw_ha_vol_pd2
+    pi_cloud_instance_id: pvs
+    pi_instance_id: nfsha-02
+    pi_volume_id: 01-sap-vol-downloads-01
+placement_groups:
+-   deploy: None
+    id: nfs_pg
+    pi_cloud_instance_id: pvs
+    pi_placement_group_name: nfs-pg
+    pi_placement_group_policy: anti-affinity
+resource_groups:
+    resource_group:
+    -   deploy: true
+        name: rg
+        tags:
+        -   az: az01
+            id: rg1
+            landscape: power-base
+            sapfunc: 2a
+            site: pd
+services:
+    power_vs:
+    -   deploy: true
+        name: powervs
+        plan: power-virtual-server-group
+        resource_group_id: rg1
+        service: power-iaas
+        tags:
+        -   app: power-iaas
+            appgrp: pvs
+            az: az01
+            id: pvs
