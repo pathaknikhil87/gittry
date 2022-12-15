@@ -17,7 +17,7 @@ cloud:
 customer:
     Components: 2a
     byoip_range: 10.13.52.0/22
-    customer_on_premise_network_range:
+    customer_on_premise_network_range: 9.0.0.0/8
     description: Power Infra base code
     domain: sap.hi.hubbell-ad.com
     env: prd
