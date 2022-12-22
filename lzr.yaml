@@ -1,6 +1,6 @@
 sub_account:
-- id: lzl
-  name: "RwSAP Client - Lazard - LOC"
+- id: lzr
+  name: "RwSAP Client - Lazard - ROC"
   parent_id: "United States"
   owneriam_id: IBMid-664002WR42
   deploy: true
