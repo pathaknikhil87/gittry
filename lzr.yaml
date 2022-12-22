@@ -1,0 +1,6 @@
+sub_account:
+- id: lazard_poc
+  name: "RwSAP Client - Lazard - LOC"
+  parent_id: "United States"
+  owneriam_id: IBMid-664002WR42
+  deploy: true
