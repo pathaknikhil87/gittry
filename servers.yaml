@@ -1,0 +1,110 @@
+"nfsha-01":
+  "addresses":
+  - "external_ip": ""
+    "ip": "172.31.138.64"
+    "macaddress": "fa:2e:5f:39:12:20"
+    "network_id": "ff51f742-3ac4-4c5a-a19e-e5b7969dfe0e"
+    "network_name": "hbl-mgmt-network-pr"
+    "type": "fixed"
+  - "external_ip": ""
+    "ip": "10.13.54.140"
+    "macaddress": "fa:2e:5f:39:12:21"
+    "network_id": "a4c66079-b820-4abe-8855-41372f827a07"
+    "network_name": "hbl-sap-network-pr"
+    "type": "fixed"
+  "deployment_type": ""
+  "health_status": "OK"
+  "id": "3f0e5a62-6849-4913-a76d-4db6454813f6"
+  "license_repository_capacity": 0
+  "max_virtual_cores": 8
+  "maxmem": 16
+  "maxproc": 8
+  "memory": 2
+  "min_virtual_cores": 1
+  "minmem": 2
+  "minproc": 1
+  "networks":
+  - "external_ip": ""
+    "ip": "172.31.138.64"
+    "macaddress": "fa:2e:5f:39:12:20"
+    "network_id": "ff51f742-3ac4-4c5a-a19e-e5b7969dfe0e"
+    "network_name": "hbl-mgmt-network-pr"
+    "type": "fixed"
+  - "external_ip": ""
+    "ip": "10.13.54.140"
+    "macaddress": "fa:2e:5f:39:12:21"
+    "network_id": "a4c66079-b820-4abe-8855-41372f827a07"
+    "network_name": "hbl-sap-network-pr"
+    "type": "fixed"
+  "pi_cloud_instance_id": "f7c0f8ba-86cb-46f1-9ce5-12c8098a837e"
+  "pi_instance_name": "icwdc06hblpibmnf01"
+  "pin_policy": "none"
+  "placement_group_id": null
+  "processors": 1
+  "proctype": "dedicated"
+  "shared_processor_pool": ""
+  "shared_processor_pool_id": ""
+  "status": "ACTIVE"
+  "storage_pool": "Tier3-Flash-3"
+  "storage_pool_affinity": false
+  "storage_type": "tier3"
+  "virtual_cores_assigned": 1
+  "volumes":
+  - "ff9da22c-d270-45a4-94c3-f0332ec9af9e"
+  - "922a56a4-4efd-4335-9def-032b2c6ab2b3"
+  - "07a2fe01-23ef-41f3-bd9f-034c0aa43318"
+  - "a8506191-6906-45b0-b27f-87b991f33a3a"
+  - "325f57b6-8db0-4aad-8630-a9414f3ee5ff"
+"nfsha-02":
+  "addresses":
+  - "external_ip": ""
+    "ip": "172.31.138.45"
+    "macaddress": "fa:8e:58:cd:c2:20"
+    "network_id": "ff51f742-3ac4-4c5a-a19e-e5b7969dfe0e"
+    "network_name": "hbl-mgmt-network-pr"
+    "type": "fixed"
+  - "external_ip": ""
+    "ip": "10.13.54.48"
+    "macaddress": "fa:8e:58:cd:c2:21"
+    "network_id": "a4c66079-b820-4abe-8855-41372f827a07"
+    "network_name": "hbl-sap-network-pr"
+    "type": "fixed"
+  "deployment_type": ""
+  "health_status": "OK"
+  "id": "f79d5328-311e-4e8d-9557-4766f0f1f8ec"
+  "license_repository_capacity": 0
+  "max_virtual_cores": 8
+  "maxmem": 16
+  "maxproc": 8
+  "memory": 2
+  "min_virtual_cores": 1
+  "minmem": 2
+  "minproc": 1
+  "networks":
+  - "external_ip": ""
+    "ip": "172.31.138.45"
+    "macaddress": "fa:8e:58:cd:c2:20"
+    "network_id": "ff51f742-3ac4-4c5a-a19e-e5b7969dfe0e"
+    "network_name": "hbl-mgmt-network-pr"
+    "type": "fixed"
+  - "external_ip": ""
+    "ip": "10.13.54.48"
+    "macaddress": "fa:8e:58:cd:c2:21"
+    "network_id": "a4c66079-b820-4abe-8855-41372f827a07"
+    "network_name": "hbl-sap-network-pr"
+    "type": "fixed"
+  "pi_cloud_instance_id": "f7c0f8ba-86cb-46f1-9ce5-12c8098a837e"
+  "pi_instance_name": "icwdc06hblpibmnf02"
+  "pin_policy": "none"
+  "placement_group_id": null
+  "processors": 1
+  "proctype": "dedicated"
+  "shared_processor_pool": ""
+  "shared_processor_pool_id": ""
+  "status": "ACTIVE"
+  "storage_pool": "Tier3-Flash-3"
+  "storage_pool_affinity": false
+  "storage_type": "tier3"
+  "virtual_cores_assigned": 1
+  "volumes":
+  - "420d0004-ebdc-43ff-857a-fd6805c7a023"
