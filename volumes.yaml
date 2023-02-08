@@ -6,7 +6,7 @@
   "pi_volume_name": "hbl-01-dev-nf-cua-ha-01-pr"
   "shareable": true
   "size": 3
-  "state": "available"
+  "state": "in-use"
   "volume_pool": "Tier3-Flash-3"
   "wwn": "6005076810810439C00000000000146E"
 "01-dev-nf-hef-ha-01":
@@ -17,7 +17,7 @@
   "pi_volume_name": "hbl-01-dev-nf-hef-ha-01-pr"
   "shareable": true
   "size": 1
-  "state": "available"
+  "state": "in-use"
   "volume_pool": "Tier3-Flash-3"
   "wwn": "6005076810810439C00000000000146D"
 "01-dev-nf-tm9-ha-01":
@@ -28,7 +28,7 @@
   "pi_volume_name": "hbl-01-dev-nf-tm9-ha-01-pr"
   "shareable": true
   "size": 2
-  "state": "available"
+  "state": "in-use"
   "volume_pool": "Tier3-Flash-3"
   "wwn": "6005076810810439C00000000000146F"
 "01-vol-sap-downloads-01":
@@ -39,6 +39,6 @@
   "pi_volume_name": "hbl-01-vol-sap-downloads-01-pr"
   "shareable": true
   "size": 1
-  "state": "available"
+  "state": "in-use"
   "volume_pool": "Tier3-Flash-3"
   "wwn": "6005076810810439C000000000001470"
