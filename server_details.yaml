@@ -1,10 +1,16 @@
 "icwdc06hblpibmnf01":
+  "cloud_instance_name": "icwdc06hblpibmnf01"
   "ips":
   - "172.31.138.64"
   - "10.13.54.140"
-  "name": "icwdc06hblpibmnf01"
-  "physical_hostname": "ichblpibmnf01"
-  "virtual_hostname": "iphblpibmnf01"
+  "name": "iphblpibmnf01"
+  "network_interfaces":
+  - "name": "primary"
+    "primary_ipv4_address": "172.31.138.64"
+  - "name": "secondary"
+    "primary_ipv4_address": "10.13.54.140"
+  "sap_sid": "to_be_defined"
+  "virtual_host": "ichblpibmnf01"
   "volumes":
   - "bootable": false
     "pi_cloud_instance_id": "f7c0f8ba-86cb-46f1-9ce5-12c8098a837e"
@@ -35,12 +41,18 @@
     "volume_size": 1
     "wwn": "6005076810810439C00000000000146D"
 "icwdc06hblpibmnf02":
+  "cloud_instance_name": "icwdc06hblpibmnf02"
   "ips":
   - "172.31.138.45"
   - "10.13.54.48"
-  "name": "icwdc06hblpibmnf02"
-  "physical_hostname": "ichblpibmnf02"
-  "virtual_hostname": "iphblpibmnf02"
+  "name": "iphblpibmnf02"
+  "network_interfaces":
+  - "name": "primary"
+    "primary_ipv4_address": "172.31.138.45"
+  - "name": "secondary"
+    "primary_ipv4_address": "10.13.54.48"
+  "sap_sid": "to_be_defined"
+  "virtual_host": "ichblpibmnf02"
   "volumes":
   - "bootable": false
     "pi_cloud_instance_id": "f7c0f8ba-86cb-46f1-9ce5-12c8098a837e"
