@@ -3,8 +3,8 @@
   "app": "nfs"
   "appgrp": "sap"
   "apptype": "nf"
-  "cloud_instance_name": "icwdc06hblpibmnf01"
   "env": "prd"
+  "icname": "icwdc06hblpibmnf01"
   "ips":
   - "172.31.138.125"
   - "10.13.54.185"
@@ -54,8 +54,8 @@
   "app": "nfs"
   "appgrp": "sap"
   "apptype": "nf"
-  "cloud_instance_name": "icwdc06hblpibmnf02"
   "env": "prd"
+  "icname": "icwdc06hblpibmnf02"
   "ips":
   - "172.31.138.169"
   - "10.13.54.142"
