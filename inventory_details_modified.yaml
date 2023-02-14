@@ -1,0 +1,189 @@
+- "all":
+  - "hostvars":
+    - "172.31.138.116":
+        "ansible_host": "172.31.138.116"
+        "app": "nfs"
+        "appgrp": "sap"
+        "apptype": "nf"
+        "env": "prd"
+        "icname": "icwdc06hblpibmnf01"
+        "ips":
+        - "172.31.138.116"
+        - "10.13.54.93"
+        "landscape": "pes"
+        "name": "iphblpibmnf01"
+        "network_interfaces":
+        - "name": "primary"
+          "primary_ipv4_address": "172.31.138.116"
+        - "name": "secondary"
+          "primary_ipv4_address": "10.13.54.93"
+        "sap_sid": "ibm"
+        "storage_tag": "dev"
+        "type": "s4hana"
+        "virtual_host": "ichblpibmnf01"
+        "volumes":
+        - "bootable": false
+          "pi_cloud_instance_id": "d7dcba9a-1add-4ac2-82c4-25178198da92"
+          "pi_instance_name": "icwdc06hblpibmnf01"
+          "volume_id": "80489791-d9e8-47b1-877e-f11e91eaf0ed"
+          "volume_name": "hbl-01-dev-nf-cua-ha-01-pr"
+          "volume_size": 3
+          "wwn": "6005076810810439C000000000001560"
+        - "bootable": false
+          "pi_cloud_instance_id": "d7dcba9a-1add-4ac2-82c4-25178198da92"
+          "pi_instance_name": "icwdc06hblpibmnf01"
+          "volume_id": "94f708aa-b68e-498c-af5d-78c588743c43"
+          "volume_name": "hbl-01-vol-sap-downloads-01-pr"
+          "volume_size": 1
+          "wwn": "6005076810810439C00000000000155E"
+        - "bootable": false
+          "pi_cloud_instance_id": "d7dcba9a-1add-4ac2-82c4-25178198da92"
+          "pi_instance_name": "icwdc06hblpibmnf01"
+          "volume_id": "175b8f92-84e5-4363-ae86-63f0f5e9e2dd"
+          "volume_name": "hbl-01-dev-nf-hef-ha-01-pr"
+          "volume_size": 1
+          "wwn": "6005076810810439C00000000000155F"
+        - "bootable": false
+          "pi_cloud_instance_id": "d7dcba9a-1add-4ac2-82c4-25178198da92"
+          "pi_instance_name": "icwdc06hblpibmnf01"
+          "volume_id": "31f38a25-99ff-433c-a792-8ce63fe15f90"
+          "volume_name": "hbl-01-dev-nf-tm9-ha-01-pr"
+          "volume_size": 2
+          "wwn": "6005076810810439C000000000001561"
+        "yaml_schema_version": "1.0.0"
+      "172.31.138.86":
+        "ansible_host": "172.31.138.86"
+        "app": "nfs"
+        "appgrp": "sap"
+        "apptype": "nf"
+        "env": "prd"
+        "icname": "icwdc06hblpibmnf02"
+        "ips":
+        - "172.31.138.86"
+        - "10.13.54.33"
+        "landscape": "pes"
+        "name": "iphblpibmnf02"
+        "network_interfaces":
+        - "name": "primary"
+          "primary_ipv4_address": "172.31.138.86"
+        - "name": "secondary"
+          "primary_ipv4_address": "10.13.54.33"
+        "sap_sid": "ibm"
+        "storage_tag": "sp2-ap"
+        "type": "s4hana"
+        "virtual_host": "ichblpibmnf02"
+        "volumes":
+        - "bootable": false
+          "pi_cloud_instance_id": "d7dcba9a-1add-4ac2-82c4-25178198da92"
+          "pi_instance_name": "icwdc06hblpibmnf02"
+          "volume_id": "80489791-d9e8-47b1-877e-f11e91eaf0ed"
+          "volume_name": "hbl-01-dev-nf-cua-ha-01-pr"
+          "volume_size": 3
+          "wwn": "6005076810810439C000000000001560"
+        - "bootable": false
+          "pi_cloud_instance_id": "d7dcba9a-1add-4ac2-82c4-25178198da92"
+          "pi_instance_name": "icwdc06hblpibmnf02"
+          "volume_id": "175b8f92-84e5-4363-ae86-63f0f5e9e2dd"
+          "volume_name": "hbl-01-dev-nf-hef-ha-01-pr"
+          "volume_size": 1
+          "wwn": "6005076810810439C00000000000155F"
+        - "bootable": false
+          "pi_cloud_instance_id": "d7dcba9a-1add-4ac2-82c4-25178198da92"
+          "pi_instance_name": "icwdc06hblpibmnf02"
+          "volume_id": "31f38a25-99ff-433c-a792-8ce63fe15f90"
+          "volume_name": "hbl-01-dev-nf-tm9-ha-01-pr"
+          "volume_size": 2
+          "wwn": "6005076810810439C000000000001561"
+        - "bootable": false
+          "pi_cloud_instance_id": "d7dcba9a-1add-4ac2-82c4-25178198da92"
+          "pi_instance_name": "icwdc06hblpibmnf02"
+          "volume_id": "94f708aa-b68e-498c-af5d-78c588743c43"
+          "volume_name": "hbl-01-vol-sap-downloads-01-pr"
+          "volume_size": 1
+          "wwn": "6005076810810439C00000000000155E"
+        "yaml_schema_version": "1.0.0"
+  - "children":
+    - "0":
+        "hosts":
+        - "icwdc06hblpibmnf01"
+      "01":
+        "hosts":
+        - "icwdc06hblpibmnf01"
+        - "icwdc06hblpibmnf02"
+      "02":
+        "hosts":
+        - "icwdc06hblpibmnf01"
+        - "icwdc06hblpibmnf02"
+      "1":
+        "hosts":
+        - "icwdc06hblpibmnf02"
+      "1.0.0":
+        "hosts":
+        - "icwdc06hblpibmnf01"
+        - "icwdc06hblpibmnf02"
+      "az01":
+        "hosts":
+        - "icwdc06hblpibmnf01"
+        - "icwdc06hblpibmnf02"
+      "core_dsg":
+        "hosts":
+        - "icwdc06hblpibmnf01"
+        - "icwdc06hblpibmnf02"
+      "dev":
+        "hosts":
+        - "icwdc06hblpibmnf01"
+      "ibm":
+        "hosts":
+        - "icwdc06hblpibmnf01"
+        - "icwdc06hblpibmnf02"
+      "linux":
+        "hosts":
+        - "icwdc06hblpibmnf01"
+        - "icwdc06hblpibmnf02"
+      "netweaver":
+        "hosts":
+        - "icwdc06hblpibmnf01"
+        - "icwdc06hblpibmnf02"
+      "nf":
+        "hosts":
+        - "icwdc06hblpibmnf01"
+        - "icwdc06hblpibmnf02"
+      "nfs":
+        "hosts":
+        - "icwdc06hblpibmnf01"
+        - "icwdc06hblpibmnf02"
+      "pes":
+        "hosts":
+        - "icwdc06hblpibmnf01"
+        - "icwdc06hblpibmnf02"
+      "ppc64le":
+        "hosts":
+        - "icwdc06hblpibmnf01"
+        - "icwdc06hblpibmnf02"
+      "primary":
+        "hosts":
+        - "icwdc06hblpibmnf01"
+        - "icwdc06hblpibmnf02"
+      "rhel":
+        "hosts":
+        - "icwdc06hblpibmnf01"
+        - "icwdc06hblpibmnf02"
+      "s4hana":
+        "hosts":
+        - "icwdc06hblpibmnf01"
+        - "icwdc06hblpibmnf02"
+      "sap":
+        "hosts":
+        - "icwdc06hblpibmnf01"
+        - "icwdc06hblpibmnf02"
+      "sapservers":
+        "hosts":
+        - "icwdc06hblpibmnf01"
+        - "icwdc06hblpibmnf02"
+      "sp2":
+        "hosts":
+        - "icwdc06hblpibmnf01"
+        - "icwdc06hblpibmnf02"
+      "sp2-ap":
+        "hosts":
+        - "icwdc06hblpibmnf02"
