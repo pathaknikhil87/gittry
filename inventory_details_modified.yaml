@@ -1,5 +1,5 @@
 "all":
-- "hostvars":
+- "hosts":
     "172.31.138.188":
       "ansible_host": "172.31.138.188"
       "app": "nfs"
