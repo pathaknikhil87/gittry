@@ -21,7 +21,35 @@
       "storage_tag": "sp2-ap"
       "type": "s4hana"
       "virtual_host": "ichblpibmnf02"
-      "volumes": []
+      "volumes":
+      - "bootable": false
+        "pi_cloud_instance_id": "7bc5cc15-61c9-473d-9e4f-b89e243b2647"
+        "pi_instance_name": "icwdc06hblpibmnf02"
+        "volume_id": "5cd1cc85-d8ae-4845-a660-48d1c43aca58"
+        "volume_name": "hbl-01-vol-sap-downloads-01-pr"
+        "volume_size": 1
+        "wwn": "6005076810810439C00000000000156D"
+      - "bootable": false
+        "pi_cloud_instance_id": "7bc5cc15-61c9-473d-9e4f-b89e243b2647"
+        "pi_instance_name": "icwdc06hblpibmnf02"
+        "volume_id": "d04fbbb9-adfc-4f04-bb37-3911cb5e0d5d"
+        "volume_name": "hbl-01-dev-nf-tm9-ha-01-pr"
+        "volume_size": 2
+        "wwn": "6005076810810439C000000000001570"
+      - "bootable": false
+        "pi_cloud_instance_id": "7bc5cc15-61c9-473d-9e4f-b89e243b2647"
+        "pi_instance_name": "icwdc06hblpibmnf02"
+        "volume_id": "1c810c35-4a41-4ac3-b012-aebe54437952"
+        "volume_name": "hbl-01-dev-nf-cua-ha-01-pr"
+        "volume_size": 3
+        "wwn": "6005076810810439C00000000000156F"
+      - "bootable": false
+        "pi_cloud_instance_id": "7bc5cc15-61c9-473d-9e4f-b89e243b2647"
+        "pi_instance_name": "icwdc06hblpibmnf02"
+        "volume_id": "260afc36-6997-4b9d-9408-215fbf9b78d4"
+        "volume_name": "hbl-01-dev-nf-hef-ha-01-pr"
+        "volume_size": 1
+        "wwn": "6005076810810439C00000000000156E"
       "yaml_schema_version": "1.0.0"
     "172.31.138.207":
       "ansible_host": "172.31.138.207"
