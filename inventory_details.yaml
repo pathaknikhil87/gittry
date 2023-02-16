@@ -1,6 +1,6 @@
 "all":
   "children":
-    "None":
+  - "None":
       "hosts":
         "172.31.138.124": null
         "172.31.138.133": null
@@ -116,8 +116,8 @@
     "sp2-ap":
       "hosts":
         "172.31.138.225": null
-  "hosts":
-    "172.31.138.124":
+  "hostvars":
+  - "172.31.138.124":
       "ansible_host": "172.31.138.124"
       "app": "hanadb"
       "appgrp": "sap"
